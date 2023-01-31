@@ -15,5 +15,19 @@ dependencies {
 }
 
 test {
-    useTestNG()
+    useTestNG(){
+//
+//        suites "src/test/resources/suites/suit_full.xml",
+//                "src/test/resources/suites/suit_negative.xml",
+//                "src/test/resources/suites/suit_full.xml"
+        useDefaultListeners true
+    }
+}
+
+task retest (type: Test){
+    useTestNG(){
+//
+       suites "build/reports/tests/test/testng-failed.xml"
+            useDefaultListeners true
+    }
 }

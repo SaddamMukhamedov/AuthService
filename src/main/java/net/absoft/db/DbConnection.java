@@ -19,7 +19,9 @@ public class DbConnection {
 
   public boolean authenticate(String email, String password) {
     // Mimic request to DB server
-    Map<String, String> users = Map.of(
+
+
+      Map<String, String> users = Map.of(
         "user1@test.com", "password1",
         "user2@test.com", "password2"
     );

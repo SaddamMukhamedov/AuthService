@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="full">
+    <listeners>
+        <listener class-name="net.absoft.Listeners.AnnotationTransformer"/>
+    </listeners>
+ <test name="authServiceTest" parallel="methods" thread-count="5"/>
+    <packages>
+        <package name="net.absoft"/>
+    </packages>
+</suite>
+
